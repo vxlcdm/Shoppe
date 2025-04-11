@@ -3,6 +3,8 @@ import {Box,Grid,Typography,Card,CardContent,CardMedia,Button,Container,Divider,
 import { data, Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addCart, removeCart, decQty,incQty } from "../redux/Slice";
+import { FaPlus, FaMinus, FaTrash, FaHeart } from 'react-icons/fa';
+
 
 
 
@@ -78,7 +80,10 @@ export default function Cart() {
 
 
                         <Card sx={{ mb: 5,
-                            
+                            backgroundColor: "#1e1e1e",
+                            color: "#ffffff",
+                            boxShadow: "3px 2px 2px 1px rgba(130, 130, 130, 0.4)",
+
                          }}>
 
                          
@@ -134,10 +139,10 @@ export default function Cart() {
                                                     <Button variant="contained" size="small" sx={{ mr: 1 }} color="primary"
                                                     onClick={()=>{deleteFromCart(value)}}
                                                     >
-                                                        🗑️
+                                                        <FaTrash size={20} color="crimson" />
                                                     </Button>
                                                     <Button variant="contained" size="small" color="error">
-                                                        ❤️
+                                                        <FaHeart size={20} color="hotpink" />
                                                     </Button>
                                                 </Box>
                                             </Grid>
@@ -149,7 +154,7 @@ export default function Cart() {
                                                         onClick={() => decrementOfQty(value)}
                                                         sx={{ px: 2, mr: 1 }}
                                                     >
-                                                        ➖
+                                                        <FaMinus size={20} color="white" />
                                                     </Button>
                                                     <input
                                                         type="number"
@@ -165,7 +170,7 @@ export default function Cart() {
                                                         // onClick={() => (sendData(product))}
                                                         sx={{ px: 2, ml: 1 }}
                                                     >
-                                                        ➕
+                                                        <FaPlus size={20} color="white" />
                                                     </Button>
                                                 </Box>
                                                 <Typography align="center" mt={2}>
@@ -199,7 +204,12 @@ export default function Cart() {
                         ml: { xs: 0, sm: "auto" },
                         width: "49%",
                     }}>
-                        <Card>
+                        <Card sx={{
+                            backgroundColor: "#1e1e1e",
+                            color: "#ffffff",
+                            boxShadow: "3px 2px 2px 1px rgba(130, 130, 130, 0.4)",
+
+                        }}>
                             <CardContent>
                                 <Typography variant="h5" gutterBottom>
                                     Summary
@@ -293,30 +303,34 @@ export default function Cart() {
 
 
 
-                    <Card   sx={{
-                        my:2
-                    }}>
-                        <CardContent>
-                            <Typography variant="body1" fontWeight="bold">
-                                We accept
-                            </Typography>
-                            <Box display="flex" gap={2} mt={1}>
-                                {[
-                                    "visa.svg",
-                                    "amex.svg",
-                                    "mastercard.svg",
-                                    
-                                ].map((src, i) => (
-                                    <img
-                                        key={i}
-                                        width={45}
-                                        alt={src.split(".")[0]}
-                                        src={`https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/${src}`}
-                                    />
-                                ))}
-                            </Box>
-                        </CardContent>
-                    </Card>
+                <Card
+                    sx={{
+                        my: 2,
+                        backgroundColor: "#1e1e1e",
+                        color: "#ffffff",
+                        boxShadow: "3px 2px 2px 1px rgba(130, 130, 130, 0.4)",
+                    }}
+                >
+                    <CardContent>
+                        <Typography variant="body1" fontWeight="bold">
+                            We accept
+                        </Typography>
+                        <Box display="flex" gap={2} mt={1}>
+                            {["visa.svg", "amex.svg", "mastercard.svg"].map((src, i) => (
+                                <img
+                                    key={i}
+                                    width={45}
+                                    alt={src.split(".")[0]}
+                                    src={`https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/${src}`}
+                                    style={{
+                                        filter: "brightness(0.9) invert(0.1)",  
+                                    }}
+                                />
+                            ))}
+                        </Box>
+                    </CardContent>
+                </Card>
+
 
 
 
@@ -332,14 +346,20 @@ export default function Cart() {
 
 
 
-                    <Card sx={{ mb: 4 }}>
-                        <CardContent>
-                            <Typography variant="body1" fontWeight="bold">
-                                Expected shipping delivery
-                            </Typography>
-                            <Typography variant="body2">12.12.2030 - 12.12.2050</Typography>
-                        </CardContent>
-                    </Card>
+                <Card sx={{ mb: 4, backgroundColor: '#1e1e1e', color: '#ffffff' ,
+                    boxShadow: "3px 2px 2px 1px rgba(130, 130, 130, 0.4)",
+
+                }}>
+                    <CardContent>
+                        <Typography variant="body1" fontWeight="bold" sx={{ color: '#ffffff' }}>
+                            Expected shipping delivery
+                        </Typography>
+                        <Typography variant="body2" sx={{ color: '#cccccc' }}>
+                            12.12.2030 - 12.12.2050
+                        </Typography>
+                    </CardContent>
+                </Card>
+
 
 
 
