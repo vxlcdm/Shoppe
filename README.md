@@ -1,12 +1,27 @@
-# React + Vite
+#REACT + VITE 🛒 React + Vite E-Commerce App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚀 Tech Stack:
+React
 
-Currently, two official plugins are available:
+Redux
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Vite
 
-## Expanding the ESLint configuration
+Material-UI (MUI)
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+API : fake store and https://randomuser.me/
+
+🎯 Objective:
+To demonstrate cart functionality and user authentication in a modern eCommerce interface.
+LIVE https://itsshoppe.netlify.app/
+
+✨ Features:
+User Authentication: Login & Signup system using localStorage/sessionStorage.
+
+Cart Functionality: Add products to cart, view and manage them.
+
+State Persistence: Redux store persists using localStorage and sessionStorage.
+
+Responsive UI: Built with MUI for clean, responsive design.
+
+Real Product Data: Fetched via FakeStore API.
