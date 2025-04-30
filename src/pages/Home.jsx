@@ -134,98 +134,105 @@ const Home = () => {
 
 
 
-            <Box
-                id="dive"
-                sx={{
-                    backgroundColor: '#1a1a1a',
-                    py: 6,
-                    px: { xs: 2, md: 10 },
-                    minHeight: '70vh',
-                    display: 'flex',
-                    alignItems: 'center',
-                }}
-            >
-                
-                <Grid container spacing={3} alignItems="center"
-                sx={{
-
-                }}>
-                    <Grid item xs={12} md={6}sx={{
-                        width: {
-                            xs: "100%",
-                            sm: "100%",
-                            md: "49%"
-                        },
-
-                    }}>
-                        <Typography
-                            variant="h3"
-                            sx={{
-                                fontWeight: 'bold',
-                                mb: 2,
-                                color: '#ffffff',
-                                textShadow: '1px 1px 4px rgba(255,255,255,0.1)',
-                            }}
-                        >
-                            Dive Into the Latest Styles
-                        </Typography>
-                        <Typography
-                            variant="h6"
-                            sx={{
-                                mb: 3,
-                                color: '#cccccc',
-                            }}
-                        >
-                            Explore our newest arrivals and shop the trendiest collections at unbeatable prices.
-                        </Typography>
-                        <Button
-                            variant="contained"
-                            component={Link}
-                            to="/shop"
-                            size="large"
-                            sx={{
-                                backgroundColor: '#f72585',
-                                '&:hover': {
-                                    backgroundColor: '#c9184a',
-                                },
-                                color: '#fff',
-                                px: { xs: 2, sm: 3, md: 4 },
-                                py: { xs: 1, sm: 1.2, md: 1.5 },
-                                fontWeight: 'bold',
-                                fontSize: { xs: '0.9rem', sm: '1rem', md: '1.1rem' },
-                                textTransform: 'none',
-                            }}
-                        >
-                            {isAuth?"Continue shopping":"Shop Now"}
-                        </Button>
-
-                    </Grid>
-
-                    <Grid item xs={12} md={6}
+          <Box  sx={{
+            display:"flex",
+            justifyContent:"center",
+            alignItems:"center",
+                // border: "1px solid red",
+          }}>
+                <Box
+                    id="dive"
                     sx={{
-                        width: {
-                            xs: "100%",
-                            sm: "100%",
-                            md: "49%"
-                        },
+                        backgroundColor: '#1a1a1a',
+                        py: 6,
+                        px: { xs: 2, md: 10 },
+                        minHeight: '70vh',
+                        display: 'flex',
+                        alignItems: 'center',
+                    }}
+                >
 
-                    }}>
-                        <Box
-                            component="img"
-                            src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                            alt=""
+                    <Grid container spacing={3} alignItems="center"
+                        sx={{
+
+                        }}>
+                        <Grid item xs={12} md={6} sx={{
+                            width: {
+                                xs: "100%",
+                                sm: "100%",
+                                md: "48%"
+                            },
+
+                        }}>
+                            <Typography
+                                variant="h3"
+                                sx={{
+                                    fontWeight: 'bold',
+                                    mb: 2,
+                                    color: '#ffffff',
+                                    textShadow: '1px 1px 4px rgba(255,255,255,0.1)',
+                                }}
+                            >
+                                Dive Into the Latest Styles
+                            </Typography>
+                            <Typography
+                                variant="h6"
+                                sx={{
+                                    mb: 3,
+                                    color: '#cccccc',
+                                }}
+                            >
+                                Explore our newest arrivals and shop the trendiest collections at unbeatable prices.
+                            </Typography>
+                            <Button
+                                variant="contained"
+                                component={Link}
+                                to="/shop"
+                                size="large"
+                                sx={{
+                                    backgroundColor: '#f72585',
+                                    '&:hover': {
+                                        backgroundColor: '#c9184a',
+                                    },
+                                    color: '#fff',
+                                    px: { xs: 2, sm: 3, md: 4 },
+                                    py: { xs: 1, sm: 1.2, md: 1.5 },
+                                    fontWeight: 'bold',
+                                    fontSize: { xs: '0.9rem', sm: '1rem', md: '1.1rem' },
+                                    textTransform: 'none',
+                                }}
+                            >
+                                {isAuth ? "Continue shopping" : "Shop Now"}
+                            </Button>
+
+                        </Grid>
+
+                        <Grid item xs={12} md={6}
                             sx={{
-                                width: '100%',
-                                height: { xs: 250, md: 400 },
-                                objectFit: 'cover',
-                                borderRadius: 3,
-                                boxShadow: '0 0 20px rgba(255,255,255,0.08)',
-                            }}
-                        />
-                    </Grid>
-                </Grid>
-            </Box>
+                                width: {
+                                    xs: "100%",
+                                    sm: "100%",
+                                    md: "48%"
+                                },
 
+                            }}>
+                            <Box
+                                component="img"
+                                src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                alt=""
+                                sx={{
+                                    width: '100%',
+                                    height: { xs: 250, md: 400 },
+                                    objectFit: 'cover',
+                                    borderRadius: 3,
+                                    boxShadow: '0 0 20px rgba(255,255,255,0.08)',
+                                }}
+                            />
+                        </Grid>
+                    </Grid>
+                </Box>
+
+          </Box>
 
 
             <Box sx={{
